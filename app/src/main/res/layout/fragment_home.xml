@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_fragment"
+    tools:context=".presentation.home.HomeFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/homeGuidelineStart"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="26dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/homeGuidelineEnd"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="26dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/homeGuidelineTop"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="93dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/homeGuidelineCenter"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".5" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/homeTitle"
+        style="@style/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/home_title"
+        app:layout_constraintEnd_toEndOf="@id/homeGuidelineEnd"
+        app:layout_constraintStart_toStartOf="@id/homeGuidelineStart"
+        app:layout_constraintTop_toTopOf="@id/homeGuidelineTop" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/homeSearch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="40dp"
+        android:background="@drawable/background_edit_text"
+        android:drawableStart="@drawable/ic_search"
+        android:drawablePadding="9dp"
+        android:hint="@string/search_hint"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/homeGuidelineEnd"
+        app:layout_constraintStart_toStartOf="@id/homeGuidelineStart"
+        app:layout_constraintTop_toBottomOf="@id/homeTitle" />
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/homePokedexCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_weight=".5"
+        app:cardBackgroundColor="#4fc1a6"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="@id/homeGuidelineCenter"
+        app:layout_constraintStart_toStartOf="@id/homeGuidelineStart"
+        app:layout_constraintTop_toBottomOf="@id/homeSearch">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_home_card">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="20dp"
+                android:text="@string/pokedex"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/homeMovesCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_weight=".5"
+        app:cardBackgroundColor="#f7786b"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="@id/homeGuidelineEnd"
+        app:layout_constraintStart_toStartOf="@id/homeGuidelineCenter"
+        app:layout_constraintTop_toBottomOf="@id/homeSearch">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_home_card">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="20dp"
+                android:text="@string/moves"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/homeAbilitiesCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_weight=".5"
+        app:cardBackgroundColor="#58abf6"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="@id/homeGuidelineCenter"
+        app:layout_constraintStart_toStartOf="@id/homeGuidelineStart"
+        app:layout_constraintTop_toBottomOf="@id/homePokedexCard">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_home_card">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="20dp"
+                android:text="@string/abilities"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/homeItemsCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_weight=".5"
+        app:cardBackgroundColor="#ffce4b"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="@id/homeGuidelineEnd"
+        app:layout_constraintStart_toStartOf="@id/homeGuidelineCenter"
+        app:layout_constraintTop_toBottomOf="@id/homeMovesCard">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_home_card">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="20dp"
+                android:text="@string/items"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/homeLocationsCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_weight=".5"
+        app:cardBackgroundColor="#7c538c"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="@id/homeGuidelineCenter"
+        app:layout_constraintStart_toStartOf="@id/homeGuidelineStart"
+        app:layout_constraintTop_toBottomOf="@id/homeAbilitiesCard">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_home_card">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="20dp"
+                android:text="@string/locations"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/homeTypeChartsCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_weight=".5"
+        app:cardBackgroundColor="#b1736c"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="@id/homeGuidelineEnd"
+        app:layout_constraintStart_toStartOf="@id/homeGuidelineCenter"
+        app:layout_constraintTop_toBottomOf="@id/homeItemsCard">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_home_card">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="20dp"
+                android:text="@string/type_charts"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,16 @@
+<resources>
+
+    // General
+    <string name="app_name">Pokedex</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    // Home Fragment
+    <string name="home_title">What Pokemon are you looking for?</string>
+    <string name="search_hint">Search Pokemon, Move, Ability, etc</string>
+    <string name="pokedex">Pokedex</string>
+    <string name="moves">Moves</string>
+    <string name="abilities">Abilities</string>
+    <string name="items">Items</string>
+    <string name="locations">Locations</string>
+    <string name="type_charts">Type charts</string>
+</resources>
